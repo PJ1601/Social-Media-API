@@ -1,1 +1,12 @@
-Generic single-database configuration.
+Social Media API 
+
+ABOUT POJECT
+This api is build using FastAPI. FastAPI is a modern, fast (high-performance), web framework for building APIs with Python.The api that I've build is a 
+Social Media like API which allows us to performe CRUD operation.
+
+Deployment
+the api is deployed on heroku as a web app. 
+https://apicrud-1-pj.herokuapp.com/
+
+For more Description check out the interactive API doumentation provided by Swagger UI
+https://apicrud-1-pj.herokuapp.com/docs
