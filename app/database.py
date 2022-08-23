@@ -8,10 +8,15 @@ from .config import settings
 
 SQLALCHEMY_DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
 
-engine = create_engine(
-    SQLALCHEMY_DATABASE_URL
-)
+URL = SQLALCHEMY_DATABASE_URL
+if URL.startswith("postgres://"):
+    URL = URL.replace("postgres://", "postgresql://")
+    
 
+engine = create_engine(
+    URL,
+    echo = True
+)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
