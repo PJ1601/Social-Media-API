@@ -3,7 +3,7 @@ name: Build and Deploy Code
 on: [push, pull_request]
 
 jobs:
-  Build:
+  build:
     environment:
       name: Testing
     env:
@@ -48,7 +48,7 @@ jobs:
           pip install pytest
           pytest -v
 
-  Deploy:
+  deploy:
     run-on: windows latest
     needs: [build]
     environment:
