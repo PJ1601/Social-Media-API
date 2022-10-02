@@ -28,7 +28,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 async def root():
-    return {"message" : "Welcome to my domain app"}
+    return {"message" : "Welcome to my domain api"}
 
 
 
