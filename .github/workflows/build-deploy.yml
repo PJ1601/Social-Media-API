@@ -31,7 +31,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: pulling git repo
         uses: actions/checkout@v3
@@ -57,7 +57,7 @@ jobs:
       - name: pulling git repo
         uses: actions/checkout@v3
       - name: deploying on Heroku
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP}} #Must be unique in Heroku
